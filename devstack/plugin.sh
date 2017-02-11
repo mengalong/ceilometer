@@ -152,7 +152,8 @@ function _ceilometer_prepare_virt_drivers {
     # Only install virt drivers if we're running nova compute
     if is_service_enabled n-cpu ; then
         if [[ "$VIRT_DRIVER" = 'libvirt' ]]; then
-            pip_install_gr libvirt-python
+            #pip_install_gr libvirt-python
+			return
         fi
 
         if [[ "$VIRT_DRIVER" = 'vsphere' ]]; then
